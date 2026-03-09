@@ -4,6 +4,17 @@ Hi! I built this web application as a personal project. Before this, I found mys
 
 Lawzen is a custom Pomodoro timer and task manager built to help me (and hopefully you!) stay focused, track progress across different sessions, and actually get things done. 
 
+## App Layouts
+
+### Home Mode
+![Home Mode](public/screenshots/home.png)
+
+### Focus Mode
+![Focus Mode](public/screenshots/focus.png)
+
+### Ambient Mode
+![Ambient Mode](public/screenshots/ambient.png)
+
 ## Features that keep me on track:
 
 - **Customizable Pomodoro Timers:** Focus intervals, short breaks, and long breaks, designed to structure study sessions effectively.
