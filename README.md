@@ -1,4 +1,4 @@
-# Lawzen: My Personal Focus & Anti-Procrastination App
+# LawZen: My Personal Focus & Anti-Procrastination App
 
 Hi! I built this web application as a personal project. Before this, I found myself constantly struggling with procrastination and losing track of time while trying to study and work. Standard timers and to-do lists just weren't cutting it for me, so I decided to take matters into my own hands and build the exact tool I needed.
 
