@@ -1,39 +1,43 @@
-# pomodoro-timer
-A web-based Pomodoro Timer designed to enhance productivity by organizing work into focused intervals followed by short breaks.
+# Lawzen: My Personal Focus & Anti-Procrastination App
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Hi! I built this web application as a personal project. Before this, I found myself constantly struggling with procrastination and losing track of time while trying to study and work. Standard timers and to-do lists just weren't cutting it for me, so I decided to take matters into my own hands and build the exact tool I needed.
+
+Lawzen is a custom Pomodoro timer and task manager built to help me (and hopefully you!) stay focused, track progress across different sessions, and actually get things done. 
+
+## Features that keep me on track:
+
+- **Customizable Pomodoro Timers:** Focus intervals, short breaks, and long breaks, designed to structure study sessions effectively.
+- **Multiple Modes:** 
+  - **Focus Mode:** A distraction-free layout with just the timer, tasks, and essential stats.
+  - **Ambient Mode:** A relaxed, atmospheric view to keep a lighter track of time.
+  - **Home Mode:** A welcoming dashboard with inspirational quotes and current progress.
+- **Built-in Task Manager:** Keep track of what needs to be done right alongside the timer.
+- **Daily Stats & Streaks:** Visualizing my daily focus time, completed tasks, and keeping up a streak motivates me to keep showing up.
+- **Beautiful & Immersive Themes:** Several curated visual and audio themes (complete with ambient sounds) to get into the right headspace.
+
+## Tech Stack
+
+I built this project to challenge myself and learn modern web development. It uses:
+- **Next.js & React:** For a fast, responsive, and dynamic user interface.
+- **Tailwind CSS:** For styling everything exactly the way I wanted.
+- **Zustand:** For managing the app's state (timers, tasks, settings) simply and effectively.
+- **Framer Motion:** For adding smooth, satisfying animations.
 
 ## Getting Started
 
-First, run the development server:
+If you want to run this locally and try it out yourself:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository.
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Built to beat procrastination, one focused session at a time.*
