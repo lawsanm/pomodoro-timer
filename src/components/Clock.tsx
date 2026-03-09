@@ -24,7 +24,7 @@ export default function Clock() {
     if (!time) return null;
 
     return (
-        <div className="text-[8rem] md:text-[12rem] font-black leading-none tracking-tighter text-white drop-shadow-2xl select-none">
+        <div className="text-[5rem] sm:text-[8rem] md:text-[10rem] lg:text-[12rem] font-black leading-none tracking-tighter text-white drop-shadow-2xl select-none">
             {time}
         </div>
     );

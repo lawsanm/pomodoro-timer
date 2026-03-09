@@ -86,7 +86,7 @@ export default function TaskList() {
                         className={`group flex items-center px-3 py-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 transition-all cursor-grab active:cursor-grabbing ${task.isFocusPriority ? "ring-1 ring-yellow-400/50 bg-yellow-400/5" : ""
                             }`}
                     >
-                        <GripVertical size={14} className="text-white/20 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mr-1" />
+                        <GripVertical size={14} className="text-white/20 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 mr-1" />
 
                         {/* Checkbox */}
                         <button
@@ -100,12 +100,12 @@ export default function TaskList() {
                         <span className="text-xs flex-shrink-0 mr-2">{task.emoji}</span>
                         <span className="flex-1 text-sm text-white/80 truncate mr-2">{task.text}</span>
 
-                        <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div className="flex items-center gap-1 opacity-100 lg:opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
                                 onClick={() => setFocusPriority(task.id)}
                                 className={`p-1.5 rounded transition-all ${task.isFocusPriority
-                                        ? "text-yellow-400"
-                                        : "text-white/30 hover:text-yellow-400 hover:bg-white/10"
+                                    ? "text-yellow-400"
+                                    : "text-white/30 hover:text-yellow-400 hover:bg-white/10"
                                     }`}
                                 title="Set as focus priority"
                             >
@@ -143,7 +143,7 @@ export default function TaskList() {
                                 <span className="flex-1 text-sm text-white/30 line-through truncate">{task.text}</span>
                                 <button
                                     onClick={() => deleteTask(task.id)}
-                                    className="p-1 text-white/10 hover:text-red-400 transition-all opacity-0 group-hover:opacity-100"
+                                    className="p-1 text-white/10 hover:text-red-400 transition-all opacity-100 lg:opacity-0 group-hover:opacity-100"
                                 >
                                     <Trash2 size={14} />
                                 </button>

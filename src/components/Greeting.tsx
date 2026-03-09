@@ -15,7 +15,7 @@ export default function Greeting() {
     if (!greeting.text) return null;
 
     return (
-        <div className="text-2xl md:text-4xl font-light text-white/90 tracking-wide">
+        <div className="text-xl sm:text-2xl md:text-4xl font-light text-white/90 tracking-wide text-center px-4">
             {greeting.text}, focus seeker. {greeting.emoji}
         </div>
     );

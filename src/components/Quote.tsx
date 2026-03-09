@@ -12,7 +12,7 @@ export default function Quote() {
 
     return (
         <div
-            className="max-w-lg text-center text-lg md:text-xl italic text-white/70 font-light cursor-pointer transition-all hover:text-white/90"
+            className="max-w-xs sm:max-w-md md:max-w-lg text-center text-base sm:text-lg md:text-xl italic text-white/70 font-light cursor-pointer transition-all hover:text-white/90 px-4"
             onClick={() => setQuote(getRandomQuote())}
             title="Click for a new quote"
         >

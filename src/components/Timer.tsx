@@ -42,7 +42,7 @@ export default function Timer() {
 
             {/* Timer Display - Massive, elegant typography */}
             <div className="relative group flex flex-col items-center">
-                <span className="text-[100px] sm:text-[140px] md:text-[180px] leading-none font-black text-white tracking-tighter drop-shadow-2xl select-none" style={{ fontVariantNumeric: "tabular-nums" }}>
+                <span className="text-[80px] sm:text-[140px] md:text-[180px] leading-none font-black text-white tracking-tighter drop-shadow-2xl select-none" style={{ fontVariantNumeric: "tabular-nums" }}>
                     {formatTime(timeLeft)}
                 </span>
 
