@@ -7,13 +7,13 @@ Lawzen is a custom Pomodoro timer and task manager built to help me (and hopeful
 ## App Layouts
 
 ### Home Mode
-![Home Mode](public/screenshots/home.png)
+![Home Mode](public/screenshots/home.png?v=2)
 
 ### Focus Mode
-![Focus Mode](public/screenshots/focus.png)
+![Focus Mode](public/screenshots/focus.png?v=2)
 
 ### Ambient Mode
-![Ambient Mode](public/screenshots/ambient.png)
+![Ambient Mode](public/screenshots/ambient.png?v=2)
 
 ## Features that keep me on track:
 
