@@ -1,0 +1,41 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a" />
+      <stop offset="50%" stop-color="#161622" />
+      <stop offset="100%" stop-color="#050505" />
+    </linearGradient>
+    
+    <!-- Accent Glow -->
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Indigo Glow -->
+  <circle cx="256" cy="270" r="140" fill="url(#glow)" />
+
+  <!-- Lotus Flower Vector -->
+  <g transform="translate(128, 140) scale(1.0)">
+    <!-- Center petal -->
+    <path d="M128,20 C140,80 180,140 128,200 C76,140 116,80 128,20 Z" fill="#f8f9fa" opacity="0.9" />
+    <!-- Inner right petal -->
+    <path d="M128,200 C150,170 190,130 200,80 C190,120 160,180 128,200 Z" fill="#f8f9fa" opacity="0.75" />
+    <!-- Inner left petal -->
+    <path d="M128,200 C106,170 66,130 56,80 C66,120 96,180 128,200 Z" fill="#f8f9fa" opacity="0.75" />
+    <!-- Outer right petal -->
+    <path d="M128,200 C160,185 220,150 240,120 C220,150 180,195 128,200 Z" fill="#f8f9fa" opacity="0.5" />
+    <!-- Outer left petal -->
+    <path d="M128,200 C96,185 36,150 16,120 C36,150 76,195 128,200 Z" fill="#f8f9fa" opacity="0.5" />
+    <!-- Bottom right petal -->
+    <path d="M128,200 C170,205 230,190 250,170 C220,195 160,210 128,200 Z" fill="#f8f9fa" opacity="0.3" />
+    <!-- Bottom left petal -->
+    <path d="M128,200 C86,205 26,190 6,170 C36,195 96,210 128,200 Z" fill="#f8f9fa" opacity="0.3" />
+  </g>
+</svg>
