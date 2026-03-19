@@ -3,7 +3,8 @@
 import { useState, useCallback } from "react";
 import { useTaskStore } from "@/store/taskStore";
 import { useStatsStore } from "@/store/statsStore";
-import { Plus, Trash2, Star, GripVertical } from "lucide-react";
+import { useAppStore } from "@/store/appStore";
+import { Plus, Trash2, Star, GripVertical, X } from "lucide-react";
 import confetti from "canvas-confetti";
 
 export default function TaskList() {
@@ -49,12 +50,20 @@ export default function TaskList() {
 
     return (
         <div className="flex flex-col h-full">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                📋 Tasks
-                <span className="text-xs text-white/40 font-normal">
-                    {incompleteTasks.length} remaining
-                </span>
-            </h3>
+            <div className="flex justify-between items-center mb-4">
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                    📋 Tasks
+                    <span className="text-xs text-white/40 font-normal">
+                        {incompleteTasks.length} remaining
+                    </span>
+                </h3>
+                <button 
+                  onClick={() => useAppStore.getState().setShowTaskPanel(false)}
+                  className="p-2 -mr-2 rounded-full hover:bg-white/10 text-white/50 hover:text-white transition-colors sm:hidden"
+                >
+                    <X size={20} />
+                </button>
+            </div>
 
             {/* Add Task Input */}
             <div className="flex gap-2 mb-4">

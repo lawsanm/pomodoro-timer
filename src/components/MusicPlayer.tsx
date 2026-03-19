@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { Play, Pause, SkipForward, SkipBack, Volume2, Loader2 } from "lucide-react";
+import { Play, Pause, SkipForward, SkipBack, Volume2, Loader2, X } from "lucide-react";
+import { useAppStore } from "@/store/appStore";
 
 interface Track {
     title: string;
@@ -108,9 +109,17 @@ export default function MusicPlayer() {
 
     return (
         <div className="p-4">
-            <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                🎵 Music Player
-            </h3>
+            <div className="flex justify-between items-center mb-4">
+                <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                    🎵 Music Player
+                </h3>
+                <button 
+                  onClick={() => useAppStore.getState().setShowMusicPlayer(false)}
+                  className="p-2 -mr-2 rounded-full hover:bg-white/10 text-white/50 hover:text-white transition-colors sm:hidden"
+                >
+                    <X size={20} />
+                </button>
+            </div>
 
             {/* Playlist Selector */}
             <div className="flex gap-2 mb-4 overflow-x-auto pb-1 scrollbar-thin">
