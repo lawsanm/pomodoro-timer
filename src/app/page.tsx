@@ -49,8 +49,7 @@ export default function Page() {
   useTimerEngine(); // Global timer ticking engine
 
   return (
-    <div className="w-screen h-screen flex flex-col relative overflow-hidden transition-all duration-1000 bg-[#0a0a0a]">
-
+    <div className="w-screen h-[100dvh] sm:h-screen flex flex-col relative overflow-hidden transition-all duration-1000 bg-[#0a0a0a]">
       {/* Background Image Layer */}
       {currentTheme.bgUrl && (
         <div
@@ -83,17 +82,21 @@ export default function Page() {
         }}
       />
 
-      {/* Mode Content */}
-      <AnimatePresence mode="wait">
-        {mode === "home" && <HomeMode key="home" />}
-        {mode === "focus" && <FocusMode key="focus" />}
-        {mode === "ambient" && <AmbientMode key="ambient" />}
-      </AnimatePresence>
+      {/* Scrollable Content Wrapper for Mobile */}
+      <div className="flex-1 w-full overflow-y-auto overflow-x-hidden relative z-10 pb-40 sm:pb-0 sm:flex sm:flex-col">
+        <div className="relative flex min-h-[100dvh] flex-col sm:h-full sm:min-h-full">
+          <AnimatePresence mode="wait">
+            {mode === "home" && <HomeMode key="home" />}
+            {mode === "focus" && <FocusMode key="focus" />}
+            {mode === "ambient" && <AmbientMode key="ambient" />}
+          </AnimatePresence>
+        </div>
+      </div>
 
       {/* Bottom Navigation */}
       <BottomNav />
 
-      {/* Sliding Panels — Persisted in DOM so audio keeps playing */}
+      {/* Sliding Panels - Persisted in DOM so audio keeps playing */}
 
       {/* Task Panel (Left) */}
       <div className={`fixed inset-0 z-50 flex transition-opacity duration-300 ${showTaskPanel ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
@@ -119,14 +122,35 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Made with love tag (Mobile Only) */}
+      <a
+        href="https://github.com/lawsanm"
+        target="_blank"
+        rel="noreferrer"
+        className="fixed bottom-[5.5rem] left-1/2 z-40 flex max-w-[calc(100vw-2rem)] -translate-x-1/2 items-center gap-1.5 whitespace-nowrap rounded-full border border-white/10 bg-black/25 px-3 py-1.5 text-xs font-medium text-white/50 backdrop-blur-xl transition-colors pointer-events-auto hover:text-white/85 sm:hidden"
+      >
+        made with <span aria-hidden="true" className="text-red-500 animate-pulse">&#10084;&#65039;</span> by{" "}
+        <span
+          className="text-primary-600 dark:text-primary-400"
+          style={{
+            fontFamily: "Caveat, cursive",
+            fontSize: "1.4rem",
+            transform: "translateY(-2px)",
+            display: "inline-block"
+          }}
+        >
+          Laux
+        </span>
+      </a>
+
       {/* Made with love tag */}
       <a
         href="https://github.com/lawsanm"
         target="_blank"
         rel="noreferrer"
-        className="fixed bottom-4 right-4 sm:right-6 z-40 text-white/40 hover:text-white/80 transition-colors flex items-center gap-1.5 font-medium text-sm pointer-events-auto mix-blend-difference"
+        className="fixed bottom-4 right-4 sm:right-6 z-40 text-white/40 hover:text-white/80 transition-colors hidden sm:flex items-center gap-1.5 font-medium text-sm pointer-events-auto mix-blend-difference"
       >
-        made with <span className="text-red-500 animate-pulse">❤️</span> by{" "}
+        made with <span aria-hidden="true" className="text-red-500 animate-pulse">&#10084;&#65039;</span> by{" "}
         <span
           className="text-primary-600 dark:text-primary-400"
           style={{
